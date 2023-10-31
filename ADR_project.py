@@ -369,27 +369,6 @@ if __name__== "__main__":
 
 
 #####################################################################################################################
-#Due to the limitations of yfinance, I can only download hourly data for the last two years from today. Hence my data
-#range is from 2021-2023. In this range, I calculated the ADR intraday returns and found that they were normally distributed
-#which is what we should expect. Because of this distribution, I classified abnormalities using the standard deviation and mean
-#which charachterise a normal distribution. I took outliers to be +/- 1.5 sigma from the mean. This meant that around 87% of
-#the days were classified as neutral and ~13% were positive or negative. I then conditioned the EUR morning session specific
-#cumulative returns (for UK stocks only so I could use the FTSE 350 consistently), and plotted the specific cumulative returns
-#for the European morning market. I plotted the individual days, which were between 14-39 days for the positive/negative conditions
-#Having done this, I further checked on how many of these days there were more than 2 positive cumulative returns. This was a
-#proxy to if the conditioned day had an overall positive return. I also looked at the distribution of months to see if particular
-#months had more conditioned days. I also looked to see at what hour the maximum return occurred at.
-
-#looking at 10 ADRS on the NYSE with their 10 underlying stocks in the UK I found that on positive|negative conditioned days, 41%|47% of those
-#days had overall positive returns. Since we are looking at specific returns, fluctuations due to the respective American and European markets
-#are not reflected in the adjusted data. Hence, we would expect changes in the returns to be due to charachteristics of the underlying stocks
-#themselves rather than general market momemntum. It is important to note that the European market morning closes before the US market opens. From my analysis, a positive
-#intraday return in America did not necessarily imply that the returns in Europe had been positive too. In fact, negative returns in America
-#often happened after positive moves in Europe. This implies that using the underlying stock data as a proxy for the performance of the ADR
-#stock is not reliable. I further looked at the hours at which the maximum returns in conditioned days happened, to check whether they would be
-#within the first 2 hours, where often more volume is traded. This was not the case on whole, as I found that the distribution for these hours
-#slightly favoured 10 and 12 oclock.
-
 
 
 
